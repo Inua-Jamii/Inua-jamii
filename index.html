@@ -9,17 +9,17 @@
       margin: 0;
       height: 100vh;
       font-family: Arial, sans-serif;
-      /* Layered background images */
+      /* Layered background images for mobile */
       background-image: 
         url('bg1.jpg'), /* First background */
         url('bg2.jpg'); /* Second background */
       background-repeat: no-repeat, no-repeat;
       background-size: 
-        100% 50%, /* First runs to center (top half) */
-        100% 50%; /* Second runs from center to bottom */
+        100% 50%, /* Top half */
+        100% 50%; /* Bottom half */
       background-position: 
-        top, /* First image from top to center */
-        center; /* Second from center to bottom */
+        top, 
+        center;
       
       display: flex;
       flex-direction: column;
@@ -27,7 +27,7 @@
       justify-content: center;
     }
 
-    /* Styling for alert message */
+    /* Alert styles */
     #alertMessage {
       display: none;
       position: fixed;
@@ -38,42 +38,47 @@
       color: white;
       padding: 10px 20px;
       border-radius: 8px;
-      font-size: 16px;
+      font-size: 14px;
       z-index: 10000;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    /* Container styles */
+    /* Header image styling for mobile */
     .header-image {
-      margin-top: 20px;
+      margin-top: 15px;
       text-align: center;
+      width: 100%;
     }
 
     .header-image img {
-      max-width: 300px;
-      width: 80%;
+      max-width: 90vw; /* Larger for mobile */
       height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
+    /* Container styling for mobile */
     .container {
       background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
-      max-width: 400px;
-      width: 80%;
-      margin-top: 20px;
+      max-width: 90vw;
+      width: 90%;
+      margin-top: 15px;
       text-align: center;
     }
 
+    /* Smaller font for welcome text on mobile */
     .welcome-text {
-      font-size: 18px;
-      margin-bottom: 20px;
+      font-size: 14px; /* smaller text */
+      margin-bottom: 15px;
     }
 
+    /* Buttons styling */
     .buttons button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
+      margin: 8px;
+      padding: 8px 16px;
+      font-size: 14px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -85,18 +90,37 @@
     .buttons button:hover {
       background-color: #0056b3;
     }
+
+    /* Media queries for extra responsiveness if needed */
+    @media (max-width: 600px) {
+      .welcome-text {
+        font-size: 12px;
+      }
+      
+      .header-image img {
+        max-width: 95vw;
+      }
+      
+      .buttons button {
+        font-size: 13px;
+        padding: 8px 14px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Alert message in center -->
+  <!-- Alert message -->
   <div id="alertMessage"></div>
 
+  <!-- Header image -->
   <div class="header-image">
     <img src="images.jpg" alt="INUA JAMII FOUNDATION" />
   </div>
+
+  <!-- Content container -->
   <div class="container">
     <p class="welcome-text">
-      Hi👋,Welcome to <strong> INUA JAMII FOUNDATION</strong>. Programu Hii Imefadhiliwa Na INUA JAMII FOUNDATION Na Shirika Zingine Zisizo Za Kiserikali(<strong> UNICEF</strong> na <strong>AMREF</strong>) .Hii Ni Programu Ya Kuinua Na Kuboresha Hali Ya Maisha Ya Wananchi(Kenya na Tanzania) Wanaohitaji Msaada. Tutakuuliza Maswali Machache Kabla Hujapokea Ofa Yako. <strong>Je Uko Tayari?</strong>
+      Hi👋, Welcome to <strong>INUA JAMII FOUNDATION</strong>. Programu Hii Imefadhiliwa Na INUA JAMII FOUNDATION Na Shirika Zingine Zisizo Za Kiserikali (<strong>UNICEF</strong> na <strong>AMREF</strong>). Hii Ni Programu Ya Kuinua Na Kuboresha Hali Ya Maisha Ya Wananchi (Kenya na Tanzania). Wanaohitaji Msaada. Tutakuuliza Maswali Machache Kabla Hujapokea Ofa Yako. <strong>Je Uko Tayari?</strong>
     </p>
     <div class="buttons">
       <button onclick="nextPage()">Ndio</button>
