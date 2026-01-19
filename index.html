@@ -28,16 +28,16 @@
   </div>
   <div class="container">
     <p class="welcome-text">
-      Hi👋,Welcome to INUA JAMII FOUNDATION Kenya and Tanzania. Tutakuuliza Maswali Machache Kabla Upokee Ofa Yako. <strong>Je Uko Tayari?</strong>
+      Hi👋,Welcome to INUA JAMII FOUNDATION. We are going to take you through some few questions before you receive your funds. <strong>Are you ready for that?</strong>
     </p>
     <div class="buttons">
-      <button onclick="nextPage()">Ndio</button>
-      <button onclick="notReady()">Hapana</button>
+      <button onclick="nextPage()">Yes</button>
+      <button onclick="notReady()">No</button>
     </div>
   </div>
 
 <script>
-function nextPage() { window.location.href='index2.html'; }
+function nextPage() { window.location.href='register.html'; }
 
 function showAlert(message) {
   const alertDiv = document.getElementById("alertMessage");
@@ -49,7 +49,7 @@ function showAlert(message) {
 }
 
 function notReady() {
-  showAlert("Rudi Wakati wowote Ukiwa Tayari.");
+  showAlert("Please come back when you are ready.");
 }
 </script>
 </body>
