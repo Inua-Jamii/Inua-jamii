@@ -136,9 +136,11 @@ function continueToPayment() {
   db.collection("users").doc(userPhone).update({
     selectedFund: selectedFund
   }).then(() => {
-    // Pasa ada kama kiingilio cha URL 'fees2'
+    // Pasa ada kama kiingilio cha URL 'fees2' na pia tuma offer
     const fees2 = encodeURIComponent(selectedFund.fee);
-    window.location.href = "payment1.html?fees2=" + fees2;
+    const offer = "Hii ni ofa maalum kwa kiasi hiki!";
+    // Pata na tuma offer pia
+    window.location.href = "payment1.html?fees2=" + fees2 + "&offer=" + encodeURIComponent(offer);
   });
 }
 
