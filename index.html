@@ -4,40 +4,108 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>INUA JAMII FOUNDATION</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      /* Layered background images */
+      background-image: 
+        url('bg1.jpg'), /* First background */
+        url('bg2.jpg'); /* Second background */
+      background-repeat: no-repeat, no-repeat;
+      background-size: 
+        100% 50%, /* First runs to center (top half) */
+        100% 50%; /* Second runs from center to bottom */
+      background-position: 
+        top, /* First image from top to center */
+        center; /* Second from center to bottom */
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Styling for alert message */
+    #alertMessage {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ff4d4d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      z-index: 10000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Container styles */
+    .header-image {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .header-image img {
+      max-width: 300px;
+      width: 80%;
+      height: auto;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 80%;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .welcome-text {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <!-- Alert message in center -->
-  <div id="alertMessage" style="
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ff4d4d; /* red background */
-    color: white; /* text color */
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 16px;
-    z-index: 10000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  "></div>
+  <div id="alertMessage"></div>
 
   <div class="header-image">
     <img src="images.jpg" alt="INUA JAMII FOUNDATION" />
   </div>
   <div class="container">
     <p class="welcome-text">
-      Hi👋,Welcome to INUA JAMII FOUNDATION. We are going to take you through some few questions before you receive your funds. <strong>Are you ready for that?</strong>
+      Hi👋,Welcome to <strong> INUA JAMII FOUNDATION</strong>. Programu Hii Imefadhiliwa Na INUA JAMII FOUNDATION Na Shirika Zingine Zisizo Za Kiserikali(<strong> UNICEF</strong> na <strong>AMREF</strong>) .Hii Ni Programu Ya Kuinua Na Kuboresha Hali Ya Maisha Ya Wananchi(Kenya na Tanzania) Wanaohitaji Msaada. Tutakuuliza Maswali Machache Kabla Hujapokea Ofa Yako. <strong>Je Uko Tayari?</strong>
     </p>
     <div class="buttons">
-      <button onclick="nextPage()">Yes</button>
-      <button onclick="notReady()">No</button>
+      <button onclick="nextPage()">Ndio</button>
+      <button onclick="notReady()">Hapana</button>
     </div>
   </div>
 
 <script>
-function nextPage() { window.location.href='register.html'; }
+function nextPage() { window.location.href='index2.html'; }
 
 function showAlert(message) {
   const alertDiv = document.getElementById("alertMessage");
@@ -49,7 +117,7 @@ function showAlert(message) {
 }
 
 function notReady() {
-  showAlert("Please come back when you are ready.");
+  showAlert("Rudi Wakati Wowote Ukiwa Tayari.");
 }
 </script>
 </body>
