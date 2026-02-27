@@ -142,16 +142,11 @@
 
   <!-- Message with icon -->
     <div id="tinyText" style="margin-top:10px;">
-    Fanya Malipo Kupitia Laini Au Wakala(Yeyote). Mara Baada Ya Malipo Yako,Tuma Nambari Yako Ya Kupokea Na Jina La Mtumaji(Laini Au Wakala) Kupitia Whatsapp.
+    Fanya Malipo Kupitia Laini Au Wakala(Yeyote).
   </div>
   
   <!-- WhatsApp Button (between message and Nyuma) -->
-  <div id="bottomWhatsApp">
-    <button onclick="window.open('https://wa.me/254101468558?text=Nimetuma', '_blank')" aria-label="WhatsApp" title="WhatsApp">
-      <!-- Your custom image instead of SVG -->
-      <img src="whaticon.png" alt="WhatsApp" />
-    </button>
-  </div>
+  
 
   <!-- Nyuma Button -->
   <div id="backButtonContainer" style="margin-top:20px; display:flex; justify-content:center;">
@@ -174,7 +169,7 @@ const phone_number = getQueryParam('phone_number') || 'Hakuna Namba';
 
 const instructionText1 = `Hongera ${name} (${phone_number}) Umechaguliwa Kupokea Tsh200,000.
 
-Unatakiwa Kulipia Tsh3000, Ada Ya Utoaji Ili Upokee Ofa Yako.  
+Unatakiwa Kulipia Tsh8000(Elfu Nane), Ada Ya Utoaji Ili Upokee Ofa Yako.  
 
 Fuata Maelezo Haya Ili Ufanye Malipo Yako. Malipo Yanafanywa kwenye Nambari Rasmi Ya Mhasibu (Amos Cosmas Paulo). Aliye Upande Wa Kupokea Malipo Na Kuachilia Ofa. 
 
@@ -188,8 +183,9 @@ const instructionText2 = '        Nambari: 0767905046';
 
 const instructionText3 = `        Jina: Amos Cosmas Paulo
         Mtandao: Vodacom
-        Kiasi: 3000`;
+        Kiasi: 8000`;
 
+  
 // Populate payText
 const payTextDiv = document.getElementById('payText');
 payTextDiv.innerHTML = '';
@@ -236,4 +232,5 @@ document.getElementById('backButton').addEventListener('click',()=>{window.locat
 </body>
 
 </html>
+
 
